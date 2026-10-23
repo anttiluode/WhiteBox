@@ -39,11 +39,10 @@
     "mlp_acc": 0.96975,
     "graph_acc": 0.9905,
     "km": {
-      "e1+e2+m+K": 1.0,
-      "e1+e2+m+K+c7": -0.003
+      "e1+e2+m+K": 1.0
     },
     "km_queries": 37600,
-    "km_seconds": 0.04
+    "km_seconds": 0.02
   },
   {
     "task": "T2",

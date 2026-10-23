@@ -87,7 +87,8 @@ def walsh_km(f, n, rng, tau=0.3, q=600):
     x = rng.choice([-1., 1.], (4000, n))
     fx = f(x)
     queries += 4000
-    return {tuple(S): float(np.mean(fx * np.prod(x[:, S], 1))) for S in live}, queries
+    est = {tuple(S): float(np.mean(fx * np.prod(x[:, S], 1))) for S in live}
+    return {S: v for S, v in est.items() if abs(v) >= tau / 2}, queries   # final coefficient threshold
 
 
 # ------------------------------------------------------------ run

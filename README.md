@@ -45,8 +45,8 @@ branches.
 - Run as a one-branch white box, the graph does slightly better on the noisy task than the MLP it
   came from. The rule is applied cleanly instead of being smeared over 64 units.
 - The query read-out finds the same branch without enumerating the input space. On T3 it also
-  passed one spurious bucket ({e1, e2, m, K, c7}), whose estimated coefficient is −0.003, so a
-  final coefficient threshold removes it.
+  passed one spurious bucket ({e1, e2, m, K, c7}), whose estimated coefficient is −0.003. v0 as first pushed
+  still returned it (caught by Sol); a final |θ| ≥ τ/2 threshold now removes it.
 
 ## What this does not show
 
@@ -58,6 +58,8 @@ branches.
   like noise (Välikäsi's lesson).
 - Real models are probably mostly low-degree (large W¹, W²) with a thin high-order tail. Fidelity
   says how much is left unexplained.
+- At 11–12 inputs the query count is larger than the cube (Sol's point); the advantage only
+  shows at 19 inputs and is not yet measured at larger n.
 - Query count grows linearly in n here, but with q = 600 fixed per bucket; the noise in bucket
   estimates is what produced the spurious T3 bucket.
 
