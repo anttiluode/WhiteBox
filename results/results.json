@@ -1,0 +1,70 @@
+[
+  {
+    "task": "T2",
+    "n": 11,
+    "branch": [
+      "e1",
+      "e2",
+      "m"
+    ],
+    "theta": 1.0,
+    "fidelity": 1.0,
+    "degree_profile": {
+      "3": 1.0
+    },
+    "graph_vs_mlp": 0.987,
+    "mlp_acc": 0.983,
+    "graph_acc": 0.993,
+    "km": {
+      "e1+e2+m": 1.0
+    },
+    "km_queries": 32800,
+    "km_seconds": 0.03
+  },
+  {
+    "task": "T3",
+    "n": 12,
+    "branch": [
+      "e1",
+      "e2",
+      "m",
+      "K"
+    ],
+    "theta": 1.0,
+    "fidelity": 1.0,
+    "degree_profile": {
+      "4": 1.0
+    },
+    "graph_vs_mlp": 0.97275,
+    "mlp_acc": 0.96975,
+    "graph_acc": 0.9905,
+    "km": {
+      "e1+e2+m+K": 1.0,
+      "e1+e2+m+K+c7": -0.003
+    },
+    "km_queries": 37600,
+    "km_seconds": 0.04
+  },
+  {
+    "task": "T2",
+    "n": 19,
+    "branch": [
+      "e1",
+      "e2",
+      "m"
+    ],
+    "theta": 1.0,
+    "fidelity": 1.0,
+    "degree_profile": {
+      "3": 1.0
+    },
+    "graph_vs_mlp": 0.983,
+    "mlp_acc": 0.9785,
+    "graph_acc": 0.991,
+    "km": {
+      "e1+e2+m": 1.0
+    },
+    "km_queries": 56800,
+    "km_seconds": 0.03
+  }
+]
